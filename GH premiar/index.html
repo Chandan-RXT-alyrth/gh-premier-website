@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GH Premier | Premium Pre-Booking Store</title>
+    <meta
+      name="description"
+      content="GH Premier is a premium local store for groceries, beauty essentials, and household needs with easy pre-booking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container navbar">
+        <div class="logo-wrap">
+          <div class="logo-mark">G</div>
+          <div>
+            <div class="brand-name">GH Premier</div>
+            <small>Premium store</small>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#shop">Shop</a>
+          <a href="#categories">Categories</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="secondary-btn small-btn" href="tel:+918953296576">Call</a>
+          <button class="primary-btn small-btn cart-btn" id="cartToggle">
+            Cart <span id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <span class="hero-tag">Premium local shopping</span>
+            <h1>Pre-book your daily essentials without standing in long queues.</h1>
+            <p>
+              GH Premier brings everyday grocery, beauty essentials, and general
+              household needs together in one premium, convenient shopping
+              experience.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#shop" class="primary-btn">Shop Now</a>
+              <a href="https://wa.me/918953296576" target="_blank" class="secondary-btn">WhatsApp Order</a>
+            </div>
+
+            <ul class="hero-points">
+              <li>Pre-booking made easy</li>
+              <li>Trusted local service</li>
+              <li>Fast order confirmation</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="showcase-card main-card">
+              <div class="floating-badge">Top picks</div>
+              <div class="showcase-product">
+                <div class="product-emoji">✨</div>
+                <div>
+                  <p>Premium Combo</p>
+                  <strong>Beauty & Household</strong>
+                </div>
+              </div>
+              <div class="showcase-boxes">
+                <div class="mini-box">
+                  <span>🧴</span>
+                  <p>Skincare</p>
+                </div>
+                <div class="mini-box">
+                  <span>🧼</span>
+                  <p>Home care</p>
+                </div>
+                <div class="mini-box">
+                  <span>🥫</span>
+                  <p>Groceries</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-card small-card">
+              <div class="floating-badge alt">Pre-book</div>
+              <div class="showcase-product">
+                <div class="product-emoji gold">📦</div>
+                <div>
+                  <p>Order ID</p>
+                  <strong>GH-2451</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-wrap">
+        <div class="container stats">
+          <div class="stat-item">
+            <strong>500+</strong>
+            <span>Happy shoppers</span>
+          </div>
+          <div class="stat-item">
+            <strong>180+</strong>
+            <span>Products</span>
+          </div>
+          <div class="stat-item">
+            <strong>24/7</strong>
+            <span>Pre-booking support</span>
+          </div>
+          <div class="stat-item">
+            <strong>4 Areas</strong>
+            <span>Local service</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-section" id="categories">
+        <div class="container">
+          <div class="section-title">
+            <span class="mini-tag">Browse by category</span>
+            <h2>Everything you need, in one place</h2>
+          </div>
+
+          <div class="categories-grid">
+            <div class="category-card">
+              <span>🛒</span>
+              <p>Grocery</p>
+            </div>
+            <div class="category-card">
+              <span>🧴</span>
+              <p>Beauty</p>
+            </div>
+            <div class="category-card">
+              <span>🏠</span>
+              <p>Household</p>
+            </div>
+            <div class="category-card">
+              <span>🧼</span>
+              <p>Care & Hygiene</p>
+            </div>
+            <div class="category-card">
+              <span>👶</span>
+              <p>Baby Care</p>
+            </div>
+            <div class="category-card">
+              <span>🧴</span>
+              <p>Personal Care</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="mini-tag">Featured products</span>
+              <h2>Popular essentials</h2>
+            </div>
+            <div class="filters">
+              <button class="filter active" data-filter="all">All</button>
+              <button class="filter" data-filter="grocery">Grocery</button>
+              <button class="filter" data-filter="beauty">Beauty</button>
+              <button class="filter" data-filter="household">Household</button>
+              <button class="filter" data-filter="care">Care</button>
+            </div>
+          </div>
+
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </section>
+
+      <section class="how-it-works" id="how-it-works">
+        <div class="container">
+          <div class="section-title left">
+            <span class="mini-tag">How it works</span>
+            <h2>Simple pre-booking flow</h2>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Browse products</h3>
+              <p>Choose from groceries, beauty, and daily essentials.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Add to cart</h3>
+              <p>Select your preferred items and proceed to pre-booking.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Verify OTP</h3>
+              <p>Secure your order with phone verification and order ID.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h3>Collect at store</h3>
+              <p>Visit the shop and collect after confirmation from GH Premier.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container">
+          <div class="section-title">
+            <span class="mini-tag">Testimonials</span>
+            <h2>Trusted by local families</h2>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Very smooth pre-booking system. I bought essentials and picked
+                them up without waiting in long lines.”
+              </p>
+              <strong>Neha Singh</strong>
+            </div>
+
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The quality and packaging of beauty products are excellent. The
+                booking process is very easy.”
+              </p>
+              <strong>Rohit Verma</strong>
+            </div>
+
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “A premium local shop with all general store essentials in one
+                place. Great service and fast confirmation.”
+              </p>
+              <strong>Sakshi Gupta</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-strip" id="contact">
+        <div class="container contact-box">
+          <div>
+            <span class="mini-tag">For pre-booking</span>
+            <h2>Order from GH Premier today</h2>
+          </div>
+
+          <div class="contact-actions">
+            <a href="https://wa.me/918953296576" target="_blank" class="primary-btn">WhatsApp Now</a>
+            <a href="tel:+918953296576" class="secondary-btn">Call Store</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="closeCart" aria-label="Close cart">×</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="subtotal">₹0</strong>
+        </div>
+        <div class="summary-row">
+          <span>Pre-booking</span>
+          <strong>₹0</strong>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <strong id="totalPrice">₹0</strong>
+        </div>
+        <button class="primary-btn full-width" id="checkoutBtn">Pre-Book</button>
+      </div>
+    </aside>
+
+    <div id="checkoutModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Pre-Booking Details</h3>
+          <button id="closeModal" aria-label="Close checkout">×</button>
+        </div>
+
+        <form id="checkoutForm">
+          <div class="form-row">
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" name="name" placeholder="Enter your name" required />
+          </div>
+
+          <div class="form-row split">
+            <div>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit mobile" required />
+            </div>
+            <div>
+              <label for="area">Area / Locality</label>
+              <input type="text" id="area" name="area" placeholder="Hanspur / Garerua" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" placeholder="House no., street, landmark..." required></textarea>
+          </div>
+
+          <div class="form-row split">
+            <div>
+              <label for="payment">Payment Option</label>
+              <select id="payment" name="payment">
+                <option>Cash on Delivery</option>
+                <option>Prepaid</option>
+                <option>Pay Later at Store</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="slot">Preferred Visit Window</label>
+              <select id="slot" name="slot">
+                <option>Any time</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="otp-box">
+            <div class="otp-row">
+              <input type="text" id="otpField" placeholder="Enter OTP" />
+              <button type="button" class="secondary-btn" id="sendOtpBtn">Send OTP</button>
+            </div>
+            <small id="otpStatus">Verification required for secure pre-booking.</small>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="secondary-btn" id="cancelCheckout">Cancel</button>
+            <button type="submit" class="primary-btn">Place Pre-Booking</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="dashboardModal" class="modal hidden">
+      <div class="modal-content dashboard-content">
+        <div class="modal-header">
+          <h3>GH Premier Dashboard</h3>
+          <button id="closeDashboard" aria-label="Close dashboard">×</button>
+        </div>
+
+        <div class="dashboard-toolbar">
+          <input type="text" id="orderSearch" placeholder="Search by Order ID or phone" />
+        </div>
+
+        <div id="ordersList" class="orders-list"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
